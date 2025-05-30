@@ -20,6 +20,16 @@
   --breakpoint-smm: 24rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f9f9f9;
+    --primary: #d4af37;
+    --secondary: #e6c76a;
+    --textcolor: #9e9e9e;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

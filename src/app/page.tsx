@@ -161,13 +161,13 @@ const Home = () => {
               <h2 className="lg:text-4xl text-3xl font-bold font-sans pt-[8px] text-white">
                 Meet Your Regulatory Ally
               </h2>
-              <p className=" pt-[16px] text-[#b2b2b2]">
+              <p className=" pt-[16px] text-[#b2b2b2]  text-justify">
                 Navigating Africa’s regulatory environment can be overwhelming —
                 but you don’t have to do it alone. At Regafrique, we act as your
                 trusted partner, helping you decode complex laws, avoid costly
                 mistakes, and create systems that support long-term success.
               </p>
-              <p className=" text-[#b2b2b2] pt-[16px] md:hidden lg:block">
+              <p className=" text-[#b2b2b2] pt-[16px] md:hidden lg:block text-justify">
                 Whether you&apos;re launching a startup or scaling a
                 multinational, our insights and tools are built for clarity,
                 compliance, and confidence. With Regafrique by your side, you’re
@@ -349,11 +349,11 @@ const Home = () => {
                   regulatory journey, together.
                 </p>
               </div>
-              <div className="hidden lg:block text-neutral-300 text-xl font-poppins">
+              <div className="hidden lg:block text-neutral-500 text-xl font-poppins">
                 Email us at{" "}
                 <a
                   href="mailto:regafrique@outlook.com"
-                  className="text-neutral-600 "
+                  className="text-neutral-300 "
                 >
                   regafrique@outlook.com
                 </a>{" "}
