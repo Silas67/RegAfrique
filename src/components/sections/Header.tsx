@@ -83,7 +83,7 @@ const Header = () => {
 
       <motion.aside
         ref={sideref}
-        className="md:hidden fixed top-0 left-0 w-full lg:h-screen h-[99vh] bg-[#333333] text-white z-40 flex flex-col justify-between px-6 pt-8 pb-6"
+        className="md:hidden fixed top-0 left-0 w-full lg:h-screen h-[95vh] bg-[#333333] text-white z-40 flex flex-col justify-between px-6 pt-8 pb-6"
         initial={{ x: "-100%", opacity: 0 }}
         animate={navIsLive ? { x: 0, opacity: 1 } : { x: "100%", opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
