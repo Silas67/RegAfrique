@@ -91,9 +91,10 @@ const Header = () => {
         {/* Top */}
         <div className="flex justify-between items-center">
           <div className="text-xl font-semibold">Regafrique</div>
-          <button onClick={handleClick} className="text-white text-2xl">
-            <Icon icon="line-md:cse" />
-          </button>
+          <button
+            onClick={handleClick}
+            className="text-white text-2xl"
+          ></button>
         </div>
 
         {/* Nav Links */}
