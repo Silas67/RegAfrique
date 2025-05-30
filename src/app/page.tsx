@@ -97,7 +97,7 @@ const Home = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="text-4xl sm:text-6xl font-poppins font-bold text-white leading-[1.15]"
+              className="text-4xl sm:text-6xl font-poppins font-black text-white leading-[1.15]"
             >
               Lost in Regulations? You&apos;re{" "}
               <span className="text-secondary">Not Alone</span>
