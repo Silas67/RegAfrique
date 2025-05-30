@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #f9f9f9;
+  --primary: #d4af37;
+  --secondary: #e6c76a;
+  --textcolor: #9e9e9e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-textcolor: var(--textcolor);
+  --font-sans: var(--font-manrope);
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+  --breakpoint-smm: 24rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #f9f9f9;
+    --primary: #d4af37;
+    --secondary: #e6c76a;
+    --textcolor: #dddddd;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  font-size: 1em;
+  font-family: var(--font-poppins);
+}
+
+.nav {
+  position: relative;
+  text-align: center;
+  top: 15%;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style-type: none;
+
+  li {
+    position: relative;
+  }
+
+  a {
+    line-height: 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--foreground);
+    display: block;
+    transition: all ease-out 400ms;
+
+    &:active {
+      color: white;
+    }
+    &:not(:active)::after {
+      color: rgb(199, 199, 199);
+    }
+  }
+}
+
+.navanime {
+  animation: navbar 1s forwards;
+}
+
+.flexbet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexstart {
+  display: flex;
+  justify-content: "start";
+  align-items: start;
+}
+
+.flexcent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transit {
+  transition: all ease-in-out;
+  transition-duration: 500ms;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 6px 9px;
+  border-radius: 5px;
+}
+
+.absbg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
