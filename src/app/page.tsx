@@ -204,7 +204,7 @@ const Home = () => {
           >
             {services.map((item, id) => (
               <div
-                className="lg:w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] overflow-hidden flexcent flex-col px-12 space-y-[20px] box"
+                className="lg:w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] overflow-hidden flexcent flex-col px-12 space-y-[20px] box"
                 key={id}
               >
                 <Icon icon={item.icon} className="text-xl" />
@@ -265,7 +265,7 @@ const Home = () => {
               ].map((item, id) => (
                 <div
                   key={id}
-                  className="w-[250px] h-[150px] rounded-2xl bg-[#0d0d0d] text-white overflow-hidden flexcent flex-col  text-center px-3 space-y-3 shadow-lg"
+                  className="w-[250px] h-[150px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] text-white overflow-hidden flexcent flex-col  text-center px-3 space-y-3 shadow-lg"
                 >
                   <h1 className="text-[12px] font-medium font-poppins">
                     {item.title}
