@@ -92,7 +92,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <div className="text-xl font-semibold">Regafrique</div>
           <button onClick={handleClick} className="text-white text-2xl">
-            <Icon icon="line-md:close" />
+            <Icon icon="line-md:cse" />
           </button>
         </div>
 
@@ -117,8 +117,8 @@ const Header = () => {
             <Icon icon="ri:linkedin-box-fill" width="24" height="24" />
             <Icon icon="ri:facebook-box-fill" width="24" height="24" />
           </div>
-          <button className="bg-green-300 text-black py-2 px-4 rounded-full font-semibold">
-            CALCULATE YOUR SAVINGS
+          <button className="bg-primary text-black py-2 px-4 rounded-full font-semibold">
+            CONTACT US NOW
           </button>
         </div>
       </motion.aside>

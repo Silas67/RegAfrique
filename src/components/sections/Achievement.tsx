@@ -18,7 +18,7 @@ const AchievementStat = ({
       <NumberFlow
         value={value}
         suffix={suffix}
-        className="text-2xl text-primary font-inter font-bold"
+        className="text-2xl text-primary font-inter font-black"
       />
       <p className="text-sm text-neutral-500">{label}</p>
     </div>
