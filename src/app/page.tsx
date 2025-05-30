@@ -331,7 +331,10 @@ const Home = () => {
       </section>
 
       {/*Contact */}
-      <section id="contact" className="w-full lg:h-[90vh] px-8 lg:px-[100px] ">
+      <section
+        id="contact"
+        className="w-full lg:h-[90vh] px-8 lg:px-[100px] mb-16"
+      >
         <div className="w-full h-full max-w-7xl mx-auto  py-16 flex flex-col lg:flex-row lg:items-start items-center justify-between md:gap-10 gap-4 ">
           {/* Text Side */}
           <Copy>
