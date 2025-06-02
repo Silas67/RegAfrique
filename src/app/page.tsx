@@ -16,6 +16,7 @@ import gsap from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/all";
+import ContactForm from "@/components/sections/Contact";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -380,65 +381,8 @@ const Home = () => {
               </Copy>
 
               {/* Form Side */}
-              <motion.form
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className="flex-1 bg-[#0d0d0d] rounded-xl p-8 space-y-6 w-full max-w-xl"
-              >
-                <div className="flex flex-col">
-                  <label htmlFor="name" className="text-white text-sm mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="px-4 py-2 rounded-md bg-neutral-900 text-white border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-gold-500"
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="email" className="text-white text-sm mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="px-4 py-2 rounded-md bg-neutral-900 text-white border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-gold-500"
-                    placeholder="you@example.com"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="message" className="text-white text-sm mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="px-4 py-2 rounded-md bg-neutral-900 text-white border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-gold-500"
-                    placeholder="Tell us what you need..."
-                    required
-                  ></textarea>
-                </div>
-                <div className="w-full flexcent">
-                  <button
-                    type="submit"
-                    className=" group flex items-center gap-2 bg-primary group-hover:bg-secondary transition-colors text-black font-semibold py-2 px-6 rounded-md "
-                  >
-                    {" "}
-                    <p className="transition-all duration-500 text-sm">
-                      Contact us
-                    </p>
-                    <Icon
-                      icon="line-md:arrow-right"
-                      className="-rotate-45 group-hover:-rotate-0 text-lg transition-all duration-500"
-                    />
-                  </button>
-                </div>
-              </motion.form>
+
+              <ContactForm />
 
               <div className="lg:hidden block text-neutral-300 lg:text-xl font-poppins my-6">
                 Email us at{" "}
