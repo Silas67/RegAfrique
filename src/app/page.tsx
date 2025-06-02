@@ -380,8 +380,6 @@ const Home = () => {
                 </div>
               </Copy>
 
-              {/* Form Side */}
-
               <ContactForm />
 
               <div className="lg:hidden block text-neutral-300 lg:text-xl font-poppins my-6">
