@@ -9,7 +9,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
 
   // Step 2: Handle form submit
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await fetch("/api/contact", {
       method: "POST",
