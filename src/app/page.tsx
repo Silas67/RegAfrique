@@ -158,10 +158,10 @@ const Home = () => {
           {/* Text Block */}
           <div className="lg:flex-1 md:flex-1/2">
             <Copy>
-              <h2 className="lg:text-4xl text-3xl font-bold font-sans pt-[8px] text-white">
+              <h2 className="lg:text-4xl text-3xl font-bold logo3 pt-[8px] text-white">
                 Meet Your Regulatory Ally
               </h2>
-              <p className=" pt-[16px] text-[#b2b2b2]  text-justify">
+              <p className=" pt-[16px] text-[#b2b2b2]  text-justify ">
                 Navigating Africa’s regulatory environment can be overwhelming —
                 but you don’t have to do it alone. At Regafrique, we act as your
                 trusted partner, helping you decode complex laws, avoid costly
@@ -224,7 +224,7 @@ const Home = () => {
           <h1 className="text-sm  text-secondary font-semibold font-sans">
             Why Our Clients Breathe Easy
           </h1>
-          <p className="text-xl pt-2">
+          <p className="lg:text-3xl pt-2 text-xl w-full">
             Because peace of mind is powerful - our clients sleep better knowing
             that
             <span className="text-neutral-600">
@@ -296,7 +296,7 @@ const Home = () => {
         <div className="w-full flexcent text-center py-5 flex-col">
           <Copy>
             {" "}
-            <p className="md:text-lg max-w-2xl font-sans text-neutral-400 text-center mt-3">
+            <p className="md:text-lg max-w-2xl  text-neutral-400 text-center mt-3">
               When you work with , you&apos;re not just ticking boxes —
               you&apos;re protecting your vision. We handle the rules, so you
               can focus on the road ahead.

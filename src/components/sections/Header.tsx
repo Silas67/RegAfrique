@@ -36,7 +36,7 @@ const Header = () => {
         <div className="w-full flex justify-between gap-10 items-center text-[12px] lg:mt-12 ">
           <div className="flexcent gap-18">
             {/* Logo */}
-            <div className="w-[50px] h-[50px] bg-foreground rounded-full"></div>
+            <div className="logo-reg text-2xl text-white">RegAfrique</div>
             {/* Navbar */}
             <div className="md:flex gap-10 hidden ">
               {Navbar.map((link, id) => {
@@ -55,8 +55,8 @@ const Header = () => {
               <Icon icon="line-md:phone-call-filled" color="black"></Icon>
             </div>
             <div>
-              <p className="text-neutral-400">Hotline 24/7</p>
-              <p>(+234)-810-488-4845</p>
+              <p className="text-neutral-400 logo2 font-bold">Hotline 24/7</p>
+              <p className="logo3 ">(+234)-810-488-4845</p>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ const Header = () => {
       >
         {/* Top */}
         <div className="flex justify-between items-center">
-          <div className="text-xl font-semibold">Regafrique</div>
+          <div className="text-xl  logo-reg">Regafrique</div>
           <button
             onClick={handleClick}
             className="text-white text-2xl"
@@ -98,13 +98,13 @@ const Header = () => {
         </div>
 
         {/* Nav Links */}
-        <ul className="flex flex-col gap-6 uppercase font-inter transform -translate-y-14 text-4xl font-semibold">
+        <ul className="flex flex-col gap-6 uppercase font-inter transform -translate-y-14 text-5xl font-semibold">
           {Navbar.map((link, i) => (
             <li key={i}>
               <Link
                 href={link.href}
                 onClick={handleClick}
-                className="hover:text-secondary transition-colors duration-300"
+                className="hover:text-secondary transition-colors duration-300 logo2"
               >
                 {link.label}
               </Link>

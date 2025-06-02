@@ -8,8 +8,7 @@ const Footer = () => {
         {/* Logo & Contact */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-foreground rounded-full"></div>
-            <h2 className="text-xl font-bold">Regafrique</h2>
+            <h2 className="text-2xl font-bd logo-reg">Regafrique</h2>
           </div>
           <p className="text-neutral-400 text-sm leading-relaxed">
             Regulatory Intelligence for Africa’s Trade Revolution. Reach out to

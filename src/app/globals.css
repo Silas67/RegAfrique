@@ -17,6 +17,7 @@
   --font-sans: var(--font-manrope);
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
+  --font-custom: [ "MyCustomFont", "sans-serif"];
   --breakpoint-smm: 24rem;
 }
 
@@ -30,6 +31,34 @@
   }
 }
 
+@font-face {
+  font-family: "MyCustomFont2";
+  src: url(/fonts/CabinetGrotesk-Variable.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont3";
+  src: url(/fonts/Satoshi-Variable.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont4";
+  src: url(/fonts/Satoshi-Variable.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url(/fonts/Exquite.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -37,7 +66,19 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "MyCustomFont4", sans-serif;
+}
+
+.logo-reg {
+  font-family: "MyCustomFont", sans-serif;
+}
+
+.logo2 {
+  font-family: "MyCustomFont3", sans-serif;
+}
+
+.logo3 {
+  font-family: "MyCustomFont2", sans-serif;
 }
 
 .sidebar {

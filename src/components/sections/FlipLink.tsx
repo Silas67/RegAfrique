@@ -14,7 +14,7 @@ const FlipLink = ({ children, href }: { children: string; href: string }) => {
         transition={{
           duration: 0.5,
         }}
-        className="relative block overflow-hidden outline-none font-sans text-sm"
+        className="relative block overflow-hidden outline-none logo2 text-sm"
       >
         <div>
           {children.split("").map((l: string, i: number) => (
