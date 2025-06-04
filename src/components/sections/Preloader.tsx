@@ -11,10 +11,10 @@ const Preloader = ({ onFinish }: { onFinish: () => void }) => {
   }, [onFinish]);
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center px-6">
+    <div className="fixed inset-0 z-[9999] bg-background flex flex-col items-center justify-center px-6 scale-[0.6]">
       {/* Animated Logo */}
       <motion.div
-        initial={{ letterSpacing: "10px", scale: 0.4 }}
+        initial={{ letterSpacing: "10px", scale: 0.6 }}
         animate={{ letterSpacing: "0px", scale: 1 }}
         transition={{
           duration: 1.2,
