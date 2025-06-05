@@ -7,25 +7,47 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  // Step 2: Handle form submit
+  const [notification, setNotification] = useState({
+    status: "",
+    message: "",
+  });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
-    });
 
-    const data = await res.json();
-    if (res.ok) {
-      alert("Message sent!");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      alert(data.message || "Failed to send message");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setNotification({
+          status: "success",
+          message: "Message sent successfully!",
+        });
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setNotification({
+          status: "error",
+          message: data.message || "Failed to send message.",
+        });
+      }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err) {
+      setNotification({
+        status: "error",
+        message: "Something went wrong.",
+      });
     }
+
+    setTimeout(() => {
+      setNotification({ status: "", message: "" });
+    }, 4000);
   };
 
   return (
@@ -37,6 +59,52 @@ const ContactForm = () => {
       transition={{ duration: 1, ease: "easeInOut" }}
       className="flex-1 bg-[#0d0d0d] rounded-xl p-8 space-y-6 w-full max-w-xl"
     >
+      {notification.status && (
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -50, opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className={`fixed top-6 left-1/2 -translate-x-1/2 px-6 py-4 rounded-xl shadow-xl z-50 flex items-center gap-4
+      ${
+        notification.status === "success"
+          ? "bg-green-600 text-white"
+          : "bg-red-600 text-white"
+      }`}
+        >
+          {notification.status === "success" ? (
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          )}
+          <p className="font-semibold text-sm">{notification.message}</p>
+        </motion.div>
+      )}
+
       <div className="flex flex-col">
         <label htmlFor="name" className="text-white text-sm mb-1">
           Name
