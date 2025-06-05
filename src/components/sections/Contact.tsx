@@ -11,6 +11,13 @@ const ContactForm = () => {
     status: "",
     message: "",
   });
+
+  const playPing = () => {
+    const audio = new Audio("/sounds/sound1.mp3");
+    audio.volume = 0.5; // make it soft
+    audio.play();
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -28,6 +35,7 @@ const ContactForm = () => {
           status: "success",
           message: "Message sent successfully!",
         });
+        playPing();
         setName("");
         setEmail("");
         setMessage("");
