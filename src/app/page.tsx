@@ -201,14 +201,14 @@ const Home = () => {
         <div className="flexcent w-full scale-[0.95]">
           <div
             ref={main}
-            className="grid md:grid-cols-2 mt-10 space-x-6 space-y-6"
+            className="grid md:grid-cols-2 gap-6 justify-center mt-10 px-4"
           >
             {services.map((item, id) => (
               <div
-                className="lg:w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] overflow-hidden flexcent flex-col px-12 space-y-[20px] box"
                 key={id}
+                className="w-full max-w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] overflow-hidden flex flex-col items-center justify-center px-8 space-y-5"
               >
-                <Icon icon={item.icon} className="text-xl" />
+                <Icon icon={item.icon} className="text-3xl" />
                 <div className="text-center space-y-1.5">
                   <h1 className="text-xl font-sans">{item.heading}</h1>
                   <p className="text-sm text-neutral-500">{item.text}</p>

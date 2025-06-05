@@ -76,8 +76,8 @@ const ContactForm = () => {
           className={`fixed top-6 left-1/2 -translate-x-1/2 px-6 py-4 rounded-xl shadow-xl z-50 flex items-center gap-4
       ${
         notification.status === "success"
-          ? "bg-green-600 text-white"
-          : "bg-red-600 text-white"
+          ? "bg-green-600 text-white w-fit"
+          : "bg-red-600 text-white w-fit"
       }`}
         >
           {notification.status === "success" ? (
