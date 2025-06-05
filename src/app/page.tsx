@@ -206,7 +206,7 @@ const Home = () => {
             {services.map((item, id) => (
               <div
                 key={id}
-                className="w-full max-w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] overflow-hidden flex flex-col items-center justify-center px-8 space-y-5"
+                className="w-full max-w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] overflow-hidden flex flex-col items-center justify-center px-8 space-y-5 box"
               >
                 <Icon icon={item.icon} className="text-3xl" />
                 <div className="text-center space-y-1.5">
