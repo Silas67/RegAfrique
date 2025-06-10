@@ -268,17 +268,20 @@ const Home = () => {
           </div>
 
           {/* Scrollable Grid of Companies */}
-          <div className="w-full relative scroll-area mt-8 py-8 overflow-x-hidden overflow-y-auto outline-none">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full px-4 outline-none">
-              {companies.map((item, id) => (
-                <div
-                  key={id}
-                  className="w-full bg-[#0d0d0d] p-4 rounded-2xl shadow-sm text-sm text-white"
-                >
-                  {item.item}
-                </div>
-              ))}
+          <div className="relative">
+            <div className="w-full relative scroll-area mt-8 py-8 overflow-x-hidden overflow-y-auto outline-none">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full px-4 outline-none">
+                {companies.map((item, id) => (
+                  <div
+                    key={id}
+                    className="w-full bg-[#0d0d0d] p-4 rounded-2xl shadow-sm text-sm text-white"
+                  >
+                    {item.item}
+                  </div>
+                ))}
+              </div>
             </div>
+            <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
           </div>
         </div>
       </section>
