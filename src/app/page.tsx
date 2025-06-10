@@ -8,7 +8,6 @@ import Image from "next/image";
 import img2 from "@/components/assets/Images/img2.jpg";
 import useLenis from "@/hooks/useLenis";
 import img3 from "@/components/assets/Images/img3.jpg";
-import img6 from "@/components/assets/Images/img5.jpg";
 import Link from "next/link";
 import AchievementStat from "@/components/sections/Achievement";
 import gsap from "gsap/all";
@@ -35,19 +34,37 @@ const Home = () => {
     },
     {
       icon: "mdi:shield-alert",
-      heading: "Risk Assessment",
-      text: "Stop compliance risks early. We scan your business for blind spots before regulators do, protecting your growth and reputation",
+      heading: "Risk Assessment & Compliance Audits",
+      text: "Evaluate enterprise risks, conduct internal control reviews, and provide actionable audit reports.",
     },
     {
       icon: "mdi:file-search",
-      heading: "Compliance Audits",
-      text: "Stay ready, always. Our detailed audit ensure your processes and documents meet standards - before regulators come knocking.",
+      heading: "AFCFTA Onboarding Support",
+      text: "Strategic guidance on documentation, customs procedures, compliance tools, and regulatory registration for regional trade.",
     },
     {
       icon: "garden:check-badge-fill-12",
       heading: "License Management",
       text: "Never miss a deadline. From new applications to renewals, we track and manage your licenses so you stay compliant year-round.",
     },
+  ];
+
+  const companies = [
+    { item: "African Continental Free Trade Area" },
+    {
+      item: "Nigerian Midstream and Downstream Petroleum Regulatory Authority",
+    },
+    { item: "Nigerian Communications Commission" },
+    { item: "Nigerian Electricity Regulatory Commission" },
+    { item: "Nigerian Export Promotion Council" },
+    { item: "Nigeria Export Processing Zones Authority" },
+    { item: "Nigerian Investment Promotion Commission" },
+    { item: "Federal Inland Revenue Service" },
+    { item: "National Consumer Credit Council" },
+    { item: "Federal Ministry of Agriculture and Rural Development" },
+    { item: "Federal Ministry of Industry, Trade and Investment" },
+    { item: "Standards Organisation of Nigeria" },
+    { item: "National Agency for Food and Drug Administration and Control" },
   ];
   const main = useRef(null);
 
@@ -92,26 +109,31 @@ const Home = () => {
 
         {/* Foreground Content */}
         <div className="flexbet lg:flex-row h-full w-full text-textcolor relative z-10 ">
-          <div className="w-full lg:w-[70%] ">
+          <div className="w-full lg:w-[70%]  ">
             <motion.h1
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="text-4xl sm:text-6xl font-poppins font-black text-white leading-[1.15]"
+              className="text-2xl sm:text-4xl font-poppins font-black text-white leading-slug
+               "
             >
-              Lost in Regulations? You&apos;re{" "}
-              <span className="text-secondary">Not Alone</span>
+              <span className="text-sm font-semibold pb-1">
+                RegAfrique Consulting:
+              </span>
+              <br />
+              Regulatory Intelligence for Africa’s{" "}
+              <span className="text-secondary">Trade Revolution</span>
             </motion.h1>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-              className="pt-3 text-neutral-400 text-sm max-w-lg font-sans"
+              className="pt-3 text-neutral-400 text-xs max-w-lg font-sans"
             >
-              Business rules are complex. We make them simple — so you can grow
-              with confidence.
+              We help businesses decode compliance, assess risks, and secure
+              licenses—so you can grow with confidence.
             </motion.p>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -163,16 +185,24 @@ const Home = () => {
                 Meet Your Regulatory Ally
               </h2>
               <p className=" pt-[16px] text-[#b2b2b2]  text-justify ">
-                Navigating Africa’s regulatory environment can be overwhelming —
-                but you don’t have to do it alone. At Regafrique, we act as your
-                trusted partner, helping you decode complex laws, avoid costly
-                mistakes, and create systems that support long-term success.
+                <span className="text-white"> RegAfrique Consulting</span> is a
+                specialized consulting firm offering tailored solutions in
+                <span className="text-white">
+                  {" "}
+                  Regulatory Guidance, Risk Assessment
+                </span>
+                , and <span className="text-white">Compliance Audits</span>,
+                with a strong focus on license application and management for
+                SMEs in Energy, Oil & Gas, Education & FMCG as well as enabling
+                seamless onboarding into the{" "}
+                <span className="text-white">
+                  African Continental Free Trade Area (AfCFTA).
+                </span>
               </p>
               <p className=" text-[#b2b2b2] pt-[16px] md:hidden lg:block text-justify">
-                Whether you&apos;re launching a startup or scaling a
-                multinational, our insights and tools are built for clarity,
-                compliance, and confidence. With Regafrique by your side, you’re
-                never in the dark — you’re always ahead.
+                We generally provide support for organizations in aligning with
+                national and regional compliance requirements to foster
+                sustainable growth and cross-border trade efficiency.
               </p>
             </Copy>
           </div>
@@ -187,7 +217,13 @@ const Home = () => {
         <Copy>
           {" "}
           <h1 className="lg:text-sm  text-secondary font-semibold font-sans text-xs">
-            What We Do - And Why It Matters
+            Our Services{" "}
+            <span
+              className="text-secondary/60
+            "
+            >
+              - And Why It Matters
+            </span>
           </h1>
           <p className="lg:text-3xl pt-2 text-xl w-full">
             Regulation is your launchpad, not your limit.{" "}
@@ -217,99 +253,137 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <div className="pt-8">
+          {/* Heading & Intro */}
+          <div>
+            <ul className="list-disc pl-4">
+              <li className="font-bold text-2xl">
+                Regulatory Compliance Advisory
+              </li>
+            </ul>
+            <p className="md:pl-10 text-sm text-neutral-400 mt-2 max-w-4xl">
+              We provide seamless support in navigating Nigeria’s regulatory
+              landscape with the following agencies among others:
+            </p>
+          </div>
+
+          {/* Scrollable Grid of Companies */}
+          <div className="w-full relative scroll-area mt-8 py-8 overflow-x-hidden overflow-y-auto outline-none">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full px-4 outline-none">
+              {companies.map((item, id) => (
+                <div
+                  key={id}
+                  className="w-full bg-[#0d0d0d] p-4 rounded-2xl shadow-sm text-sm text-white"
+                >
+                  {item.item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Why Us? */}
-      <section className="w-full px-8 lg:px-[100px] py-20 ">
+      <section className="w-full px-8 lg:px-[100px] py-20">
         <Copy>
-          <h1 className="text-sm  text-secondary font-semibold font-sans">
-            Why Our Clients Breathe Easy
+          <h1 className="text-sm text-secondary font-semibold font-sans">
+            Why Choose Us
           </h1>
           <p className="lg:text-3xl pt-2 text-xl w-full">
-            Because peace of mind is powerful - our clients sleep better knowing
-            that
+            We work closely with organizations that operate in
             <span className="text-neutral-600">
               {" "}
-              compliance isn&apos;t a ticking bomb
-            </span>
+              highly regulated or cross-border
+            </span>{" "}
+            sectors.
           </p>
         </Copy>
 
         {/* Top: Image and Text Side by Side */}
-        <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 mt-10 px-4">
-          {/* Text Block */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="flex-1 flex justify-center"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "Reduced Legal Risks",
-                  desc: "Avoid costly penalties and shutdowns by staying compliant.",
-                },
-                {
-                  title: "Faster Market Access",
-                  desc: "Cut through the red tape and enter new markets with ease.",
-                },
-                {
-                  title: "Peace of Mind",
-                  desc: "Focus on growth while we handle compliance.",
-                },
-                {
-                  title: "Better Investor Trust",
-                  desc: "Well-structured, compliant businesses attract serious investors.",
-                },
-              ].map((item, id) => (
-                <div
-                  key={id}
-                  className="w-[250px] h-[150px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] text-white overflow-hidden flexcent flex-col  text-center px-3 space-y-3 shadow-lg"
-                >
-                  <h1 className="text-[12px] font-medium font-poppins">
-                    {item.title}
-                  </h1>
-                  <p className="text-sm text-neutral-400">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
+        <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 mt-10 px-4 flexcent">
           {/* Image Block */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className=" w-full max-w-sm h-[300px] rounded-[10px] overflow-hidden"
+            className="flex- flex justify-center"
           >
-            <Image
-              src={img6}
-              alt="About us image"
-              className="object-cover w-full h-full"
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                {
+                  desc: "Deep legal and policy expertise in West African regulatory frameworks.",
+                },
+                {
+                  desc: "Practical tools for compliance and onboarding",
+                },
+                {
+                  desc: "Personalized advisory and scalable service packages",
+                },
+                {
+                  desc: "Experience with manufacturing, petrochemical, and trade-intensive sectors",
+                },
+              ].map((item, id) => (
+                <div
+                  key={id}
+                  className="w-[250px] h-[150px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] text-white overflow-hidden flexcent flex-col  text-center px-3 space-y-3 shadow-lg"
+                >
+                  <p className="text-sm text-neutral-400">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+          {/* Text Block */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="flex-1 flex justify-center  flex-col"
+          >
+            <h1 className="text-2xl font-bold mb-2">Target Clients</h1>
+
+            <ul className=" list-inside space-y-2 text-[14px] font-poppins text-foreground">
+              {[
+                "Manufacturers in Energy, Oil & Gas sectors",
+                "Exporters & SMEs entering African markets",
+                "Multinational companies with compliance obligations across jurisdictions",
+                "Players in FMCG and logistics",
+              ].map((item, id) => (
+                <li key={id} className="flex gap-2 ">
+                  <Icon icon="game-icons:target-shot" className="text-xl " />
+                  <div className="flex-1 text-neutral-200">{item}</div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="hidden lg:block mt-6 text-neutral-400">
+              We work closely with organizations that operate in highly
+              regulated or cross-border sectors. These clients rely on us to
+              simplify complex legal frameworks and ensure they remain
+              audit-ready, always.
+            </div>
           </motion.div>
         </div>
 
         {/* Ending */}
         <div className="w-full flexcent text-center py-5 flex-col">
           <Copy>
-            {" "}
-            <p className="md:text-lg max-w-2xl  text-neutral-400 text-center mt-3">
-              When you work with , you&apos;re not just ticking boxes —
+            <p className="md:text-lg max-w-2xl text-neutral-400 text-center mt-3">
+              When you work with us, you&apos;re not just ticking boxes —
               you&apos;re protecting your vision. We handle the rules, so you
               can focus on the road ahead.
             </p>
           </Copy>
 
+          {/* Stats */}
           <div className="grid grid-cols-3 gap-6 mt-4">
             {stats.map((stat, index) => (
               <AchievementStat key={index} {...stat} />
             ))}
           </div>
 
+          {/* CTA Button */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -318,8 +392,8 @@ const Home = () => {
             className="flex items-center gap-5 mt-4"
           >
             <Link
-              href={"#contact"}
-              className="button bg-primary  text-white text-sm gap-2 hover:bg-secondary transition cursor-pointer px-4 py-2 rounded"
+              href="#contact"
+              className="button bg-primary text-white text-sm gap-2 hover:bg-secondary transition cursor-pointer px-4 py-2 rounded"
             >
               Get Started
               <Icon

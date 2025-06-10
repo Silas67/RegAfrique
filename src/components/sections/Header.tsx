@@ -119,7 +119,10 @@ const Header = () => {
         {/* Bottom section */}
         <div className="flex flex-col gap-4">
           <div className="flex gap-4">
-            <Icon icon="ri:linkedin-box-fill" width="24" height="24" />
+            <Link href={"/"}>
+              <Icon icon="ri:linkedin-box-fill" width="24" height="24" />
+            </Link>
+
             <Icon icon="ri:facebook-box-fill" width="24" height="24" />
           </div>
           <button className="bg-primary text-black py-2 px-4 rounded-full font-semibold">
