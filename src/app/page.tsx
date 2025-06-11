@@ -209,10 +209,10 @@ const Home = () => {
           {" "}
           <div className="w-full text-center">
             {" "}
-            <h2 className="text-3xl font-bold mb-4 text-white">
+            <h2 className="text-3xl font-bold mb-3 text-white">
               Our <span className="text-secondary">Services</span>
             </h2>
-            <p className="text-neutral-400 lg:text-lg text-sm lg:max-w-3xl md:max-w-xl  leading-relaxed lg::mb-12 md:mb-6">
+            <p className="text-neutral-400 lg:text-lg text-sm lg:max-w-4xl md:max-w-xl  leading-relaxed lg:mb-12 md:mb-6">
               We help organizations simplify regulatory frameworks across
               Nigeria and Africa, providing expert advisory in:
             </p>
@@ -279,11 +279,14 @@ const Home = () => {
       <section className="w-full px-8 lg:px-[100px] py-12">
         <Copy>
           {" "}
-          <div className="w-full text-center">
+          <div className="w-full text-center mb-12">
             {" "}
-            <h2 className="text-3xl font-bold mb-4 text-white">
+            <h2 className="text-3xl font-bold  text-white">
               Why <span className="text-secondary"> Choose Us</span>
             </h2>
+            <p className="text-neutral-600 ">
+              Making Complex Regulations Simple for Your Business.
+            </p>
           </div>
         </Copy>
 
@@ -400,12 +403,14 @@ const Home = () => {
       >
         <Copy>
           {" "}
-          <div className="w-full text-center">
+          <div className="w-full text-center  mb-12">
             {" "}
-            <h2 className="text-3xl font-bold mb-12 text-white">
+            <h2 className="text-3xl font-bold text-white">
               <span className="text-secondary">Contact</span> Us
             </h2>
-            <p></p>
+            <p className="text-neutral-500">
+              Let’s Discuss Your Compliance & Trade Needs.
+            </p>
           </div>
         </Copy>
 
