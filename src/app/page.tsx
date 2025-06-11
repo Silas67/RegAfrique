@@ -279,12 +279,12 @@ const Home = () => {
       <section className="w-full px-8 lg:px-[100px] py-12">
         <Copy>
           {" "}
-          <div className="w-full text-center mb-12">
+          <div className="w-full text-center ">
             {" "}
-            <h2 className="text-3xl font-bold  text-white">
+            <h2 className="text-3xl font-bold mb-3 text-white">
               Why <span className="text-secondary"> Choose Us</span>
             </h2>
-            <p className="text-neutral-600 ">
+            <p className="text-neutral-600 lg:mb-12 md:mb-6">
               Making Complex Regulations Simple for Your Business.
             </p>
           </div>
@@ -405,10 +405,10 @@ const Home = () => {
           {" "}
           <div className="w-full text-center  mb-12">
             {" "}
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-3xl font-bold text-white mb-3">
               <span className="text-secondary">Contact</span> Us
             </h2>
-            <p className="text-neutral-500">
+            <p className="text-neutral-500 mb-12">
               Let’s Discuss Your Compliance & Trade Needs.
             </p>
           </div>
