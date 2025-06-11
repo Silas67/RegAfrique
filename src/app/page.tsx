@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 import Copy from "@/hooks/Copy";
 import Image from "next/image";
-import img2 from "@/components/assets/Images/img2.jpg";
+import img2 from "@/components/assets/Images/img11.jpg";
 import useLenis from "@/hooks/useLenis";
 import img3 from "@/components/assets/Images/img3.jpg";
 import Link from "next/link";
@@ -169,7 +169,7 @@ const Home = () => {
               fill
               className="object-cover w-full h-full"
             />
-            <div className="absolute inset-0 bg-black opacity-30"></div>
+            <div className="absolute inset-0 bg-black opacity-20"></div>
           </motion.div>
 
           {/* Text Block */}
