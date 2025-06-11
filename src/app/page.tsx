@@ -408,7 +408,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold text-white mb-3">
               <span className="text-secondary">Contact</span> Us
             </h2>
-            <p className="text-neutral-500 mb-12">
+            <p className="text-neutral-500">
               Let’s Discuss Your Compliance & Trade Needs.
             </p>
           </div>
