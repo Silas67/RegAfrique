@@ -168,7 +168,7 @@ body {
 }
 
 .scroll-area {
-  max-height: 150px;
+  max-height: 250px;
   overflow-y: scroll;
   /* for Firefox */
   scrollbar-width: thin;

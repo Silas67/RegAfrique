@@ -269,7 +269,11 @@ const Home = () => {
 
           {/* Scrollable Grid of Companies */}
           <div className="relative">
-            <div className="w-full relative scroll-area mt-8 py-8 overflow-x-hidden overflow-y-auto outline-none">
+            <div className="text-white mt-8 w-full flexcent animate-bounce opacity-55">
+              Scroll down to see more{" "}
+              <Icon icon="line-md:arrow-small-down" width="24" height="24" />
+            </div>
+            <div className="w-full relative scroll-area  py-8 overflow-x-hidden overflow-y-auto outline-none">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full px-4 outline-none">
                 {companies.map((item, id) => (
                   <div
