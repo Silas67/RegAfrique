@@ -3,18 +3,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#181818] text-foreground py-20 px-6 md:px-20">
+    <footer className="w-full bg-secondary text-background py-20 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
         {/* Logo & Contact */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
             <h2 className="text-2xl font-bd logo-reg">Regafrique</h2>
           </div>
-          <p className="text-neutral-400 text-sm leading-relaxed">
+          <p className="text-neutral-800 text-sm leading-relaxed">
             Regulatory Intelligence for Africa’s Trade Revolution. Reach out to
             us for licensing, compliance, and regulatory strategy.
           </p>
-          <div className="text-sm text-neutral-400">
+          <div className="text-sm text-neutral-800">
             <p>
               Email:{" "}
               <a
@@ -32,7 +32,7 @@ const Footer = () => {
         {/* Navigation */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-3 text-neutral-300">
+          <ul className="space-y-3 text-neutral-800">
             {["Home", "About", "Services", "Contact"].map((item) => (
               <li key={item}>
                 <a
@@ -49,7 +49,7 @@ const Footer = () => {
         {/* Socials */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-          <ul className="space-y-3 text-neutral-300">
+          <ul className="space-y-3 text-neutral-800">
             {[
               {
                 name: "LinkedIn",
@@ -79,7 +79,7 @@ const Footer = () => {
       </div>
 
       {/* Footer bottom */}
-      <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
+      <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-700">
         <p>&copy; 2025 Regafrique. All rights reserved.</p>
         <p>The website runs on the internet and your smile 😄</p>
       </div>

@@ -98,7 +98,7 @@ const Home = () => {
       {/* Hero */}
       <section
         id="/"
-        className="w-full relative h-screen px-[30px] lg:px-[100px] overflow-hidden"
+        className="w-full relative h-screen px-[30px] lg:px-[100px] overflow-hidden py-24"
       >
         {/* Background Image */}
         <div className="absolute inset-0 -z-10">
@@ -148,8 +148,11 @@ const Home = () => {
       {/* Who? */}
       <section
         id="about"
-        className="w-full flex flex-col items-center gap-8 py-12 px-8 lg:px-[100px] pt-20"
+        className="w-full flex flex-col items-center gap-8 py-24 px-8 lg:px-[100px] bg-[#101010]"
       >
+        <h2 className="text-3xl font-bold mb-6 text-white">
+          <span className="text-secondary">About</span> RegAfrique
+        </h2>
         {/* Top: Image and Text Side by Side */}
         <div className="w-full max-w-7xl flex flex-col md:flex-row gap-10 items-start">
           {/* Image Block */}
@@ -172,10 +175,7 @@ const Home = () => {
           {/* Text Block */}
           <div className="lg:flex-1 md:flex-1/2">
             <Copy>
-              <h2 className="lg:text-4xl text-3xl font-bold logo3 pt-[8px] text-white">
-                Meet Your Regulatory Ally
-              </h2>
-              <p className=" pt-[16px] text-[#b2b2b2]  text-justify ">
+              <p className="text-neutral-400  max-w-4xl lg:text-lg leading-relaxed text-justify ">
                 <span className="text-white"> RegAfrique Consulting</span> is a
                 specialized consulting firm offering tailored solutions in
                 <span className="text-white">
@@ -190,7 +190,7 @@ const Home = () => {
                   African Continental Free Trade Area (AfCFTA).
                 </span>
               </p>
-              <p className=" text-[#b2b2b2] pt-[16px] md:hidden lg:block text-justify">
+              <p className=" text-[#b2b2b2] pt-[8px] md:hidden lg:block text-justify">
                 We generally provide support for organizations in aligning with
                 national and regional compliance requirements to foster
                 sustainable growth and cross-border trade efficiency.
@@ -203,26 +203,20 @@ const Home = () => {
       {/* Services */}
       <section
         id="services"
-        className=" w-full py-20 flex-col lg:px-[100px] px-[30px]"
+        className=" w-full py-24 flexcent flex-col lg:px-[100px] px-[30px] "
       >
         <Copy>
           {" "}
-          <h1 className="lg:text-sm  text-secondary font-semibold font-sans text-xs">
-            Our Services{" "}
-            <span
-              className="text-secondary/60
-            "
-            >
-              - And Why It Matters
-            </span>
-          </h1>
-          <p className="lg:text-3xl pt-2 text-xl w-full">
-            Regulation is your launchpad, not your limit.{" "}
-            <span className="text-neutral-600">
-              We turn red tape into a runway
-            </span>{" "}
-            so your business can take off with clarity and confidence.
-          </p>
+          <div className="w-full text-center">
+            {" "}
+            <h2 className="text-3xl font-bold mb-4 text-white">
+              Our <span className="text-secondary">Services</span>
+            </h2>
+            <p className="text-neutral-400 lg:text-lg text-sm lg:max-w-3xl md:max-w-xl  leading-relaxed lg::mb-12 md:mb-6">
+              We help organizations simplify regulatory frameworks across
+              Nigeria and Africa, providing expert advisory in:
+            </p>
+          </div>
         </Copy>
 
         <div className="flexcent w-full scale-[0.95]">
@@ -282,19 +276,15 @@ const Home = () => {
       </section>
 
       {/* Why Us? */}
-      <section className="w-full px-8 lg:px-[100px] py-20">
+      <section className="w-full px-8 lg:px-[100px] py-12">
         <Copy>
-          <h1 className="text-sm text-secondary font-semibold font-sans">
-            Why Choose Us
-          </h1>
-          <p className="lg:text-3xl pt-2 text-xl w-full">
-            We work closely with organizations that operate in
-            <span className="text-neutral-600">
-              {" "}
-              highly regulated or cross-border
-            </span>{" "}
-            sectors.
-          </p>
+          {" "}
+          <div className="w-full text-center">
+            {" "}
+            <h2 className="text-3xl font-bold mb-4 text-white">
+              Why <span className="text-secondary"> Choose Us</span>
+            </h2>
+          </div>
         </Copy>
 
         {/* Top: Image and Text Side by Side */}
@@ -406,49 +396,93 @@ const Home = () => {
       {/*Contact */}
       <section
         id="contact"
-        className="w-full lg:h-[90vh] px-8 lg:px-[100px] mb-16"
+        className="w-full  py-24 px-8 lg:px-[100px] bg-[#101010]"
       >
-        <div className="w-full h-full max-w-7xl mx-auto  py-16 flex flex-col lg:flex-row lg:items-start items-center justify-between md:gap-10 gap-4 ">
+        <Copy>
+          {" "}
+          <div className="w-full text-center">
+            {" "}
+            <h2 className="text-3xl font-bold mb-12 text-white">
+              <span className="text-secondary">Contact</span> Us
+            </h2>
+            <p></p>
+          </div>
+        </Copy>
+
+        <div className="w-full h-full max-w-7xl mx-auto  flex flex-col-reverse lg:flex-row lg:items-start items-center justify-between md:gap-10 gap-4 ">
           {/* Text Side */}
           <Copy>
-            <div className="flex-1 flexbet flex-col h-full pb-12 pt-4">
+            <div className="flex-1 flexbet flex-col h-full pb-6 pt-4 space-y-8">
               <div>
-                <h1 className="text-sm  text-secondary font-semibold font-sans">
-                  Get In Touch
-                </h1>
-                <p className="lg:text-3xl text-xl pt-2 font-sans">
-                  Your Growth Starts Here - Let’s
+                <p className="text-2xl pt-2 font-sans hidden lg:block">
+                  Your Growth Starts Here — Let’s
                   <span className="text-neutral-600"> simplify</span> your
                   regulatory journey, together.
                 </p>
               </div>
-              <div className="hidden lg:block text-neutral-500 text-xl font-poppins">
-                Email us at{" "}
-                <a
-                  href="mailto:regafrique@outlook.com"
-                  className="text-neutral-300 "
-                >
-                  regafrique@outlook.com
-                </a>{" "}
-                or call <span className="text-white">09088328894</span>,{" "}
-                <span className="text-white">08182177517</span>
+
+              <div className="text-neutral-400 text-base font-poppins space-y-3">
+                <div className="flex items-start gap-3">
+                  <Icon
+                    icon="mdi:office-building-marker-outline"
+                    className="text-secondary text-xl"
+                  />
+                  <p className="flex">
+                    1st Floor, Kebbi Hotel, Central Business District, Abuja,
+                    Nigeria
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Icon
+                    icon="mdi:email-outline"
+                    className="text-secondary text-xl"
+                  />
+                  <a
+                    href="mailto:regafrique@outlook.com"
+                    className="text-neutral-300"
+                  >
+                    regafrique@outlook.com
+                  </a>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Icon
+                    icon="mdi:phone-outline"
+                    className="text-secondary text-xl"
+                  />
+                  <p>09088328894 &nbsp; | &nbsp; 08182177517</p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Icon icon="mdi:web" className="text-secondary text-xl" />
+                  <a
+                    href="https://www.regafrique.com.ng"
+                    target="_blank"
+                    className="text-neutral-300"
+                  >
+                    www.regafrique.com.ng
+                  </a>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Icon
+                    icon="mdi:linkedin"
+                    className="text-secondary text-xl"
+                  />
+                  <a
+                    href="https://www.linkedin.com/company/regafrique-consulting"
+                    target="_blank"
+                    className="text-neutral-300"
+                  >
+                    LinkedIn: regafrique-consulting
+                  </a>
+                </div>
               </div>
             </div>
           </Copy>
 
           <ContactForm />
-
-          <div className="lg:hidden block text-neutral-300 lg:text-xl font-poppins my-6">
-            Email us at{" "}
-            <a
-              href="mailto:regafrique@outlook.com"
-              className="text-neutral-600 "
-            >
-              regafrique@outlook.com
-            </a>{" "}
-            or call <span className="text-white">09088328894</span>,{" "}
-            <span className="text-white">08182177517</span>
-          </div>
         </div>
       </section>
       <Footer />

@@ -56,7 +56,7 @@ const Header = () => {
             </div>
             <div>
               <p className="text-neutral-400 logo2 font-bold">Hotline 24/7</p>
-              <p className="logo3 ">(+234)-810-488-4845</p>
+              <p className="logo3 ">(+234)-908-832-8894</p>
             </div>
           </div>
         </div>
