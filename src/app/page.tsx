@@ -38,14 +38,14 @@ const Home = () => {
       text: "Evaluate enterprise risks, conduct internal control reviews, and provide actionable audit reports.",
     },
     {
-      icon: "mdi:file-search",
+      icon: "famicons:earth-outline",
       heading: "AFCFTA Onboarding Support",
       text: "Strategic guidance on documentation, customs procedures, compliance tools, and regulatory registration for regional trade.",
     },
     {
-      icon: "garden:check-badge-fill-12",
-      heading: "License Management",
-      text: "Never miss a deadline. From new applications to renewals, we track and manage your licenses so you stay compliant year-round.",
+      icon: "mdi:account-group",
+      heading: "Training & Capacity Building",
+      text: "Workshops for legal teams, compliance officers, and executive management.",
     },
   ];
 
