@@ -125,16 +125,7 @@ const Home = () => {
               Regulatory Intelligence for Africa’s{" "}
               <span className="text-secondary">Trade Revolution</span>
             </motion.h1>
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-              className="pt-3 text-neutral-400 text-xs max-w-lg font-sans"
-            >
-              We help businesses decode compliance, assess risks, and secure
-              licenses—so you can grow with confidence.
-            </motion.p>
+
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
