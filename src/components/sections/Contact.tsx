@@ -158,9 +158,9 @@ const ContactForm = () => {
       <div className="w-full flexcent">
         <button
           type="submit"
-          className="group flex items-center gap-2 bg-primary hover:bg-secondary transition-colors text-black font-semibold py-2 px-6 rounded-md outline-none"
+          className="group flex items-center gap-2 bg-primary hover:bg-secondary transition-all text-black font-semibold py-2 px-6 rounded-md outline-none hover:scale-105 hover:shadow-2xl duration-200"
         >
-          <p className="transition-all duration-500 text-sm">Contact us</p>
+          <p className="transition-all duration-500 text-sm">Send Message</p>
           <Icon
             icon="line-md:arrow-right"
             className="-rotate-45 group-hover:-rotate-0 text-lg transition-all duration-500"

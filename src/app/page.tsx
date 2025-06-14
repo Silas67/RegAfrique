@@ -95,6 +95,7 @@ const Home = () => {
   return (
     <div className="w-full relative flexcent flex-col overflow-hidden">
       <Header />
+
       {/* Hero */}
       <section
         id="/"
@@ -109,13 +110,13 @@ const Home = () => {
 
         {/* Foreground Content */}
         <div className="flexbet lg:flex-row h-full w-full text-textcolor relative z-10 ">
-          <div className="w-full lg:w-[70%]  ">
+          <div className="w-full max-w-4xl  ">
             <motion.h1
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="text-2xl sm:text-4xl font-poppins font-black text-white leading-slug
+              className="text-2xl sm:text-5xl font-poppins font-black text-white leading-tight
                "
             >
               <span className="text-sm font-semibold pb-1">
@@ -133,13 +134,18 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
               className="flex items-center gap-5 mt-4"
             >
-              <div className="button bg-primary mt-[10px] text-white text-sm gap-2 hover:bg-secondary transition cursor-pointer px-4 py-2 rounded">
-                Contant us Now
+              <Link
+                href="#contact"
+                className="group flex items-center gap-2 bg-primary hover:bg-secondary transition-all text-black font-semibold py-2 px-6 rounded-md outline-none hover:scale-105 hover:shadow-2xl duration-200"
+              >
+                <p className="transition-all duration-500 text-sm">
+                  Contact us
+                </p>
                 <Icon
-                  icon="line-md:arrow-up"
-                  className="text-xl rotate-[50deg]"
+                  icon="line-md:arrow-right"
+                  className="-rotate-45 group-hover:-rotate-0 text-lg transition-all duration-500"
                 />
-              </div>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -150,9 +156,16 @@ const Home = () => {
         id="about"
         className="w-full flex flex-col items-center gap-8 py-24 px-8 lg:px-[100px] bg-[#101010]"
       >
-        <h2 className="text-3xl font-bold mb-6 text-white">
+        <motion.h2
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="text-3xl font-bold mb-6 text-white"
+        >
           <span className="text-secondary">About</span> RegAfrique
-        </h2>
+        </motion.h2>
+
         {/* Top: Image and Text Side by Side */}
         <div className="w-full max-w-7xl flex flex-col md:flex-row gap-10 items-start">
           {/* Image Block */}
@@ -173,9 +186,9 @@ const Home = () => {
           </motion.div>
 
           {/* Text Block */}
-          <div className="lg:flex-1 md:flex-1/2">
+          <div className="lg:flex-1 md:flex-1/2 max-w-3xl ">
             <Copy>
-              <p className="text-neutral-400  max-w-4xl lg:text-lg leading-relaxed text-justify ">
+              <p className="text-neutral-400  lg:text-lg leading-relaxed text-justify ">
                 <span className="text-white"> RegAfrique Consulting</span> is a
                 specialized consulting firm offering tailored solutions in
                 <span className="text-white">
@@ -190,7 +203,7 @@ const Home = () => {
                   African Continental Free Trade Area (AfCFTA).
                 </span>
               </p>
-              <p className=" text-[#b2b2b2] pt-[8px] md:hidden lg:block text-justify">
+              <p className=" text-[#b2b2b2] pt-[8px] lg:text-lg md:hidden lg:block text-justify">
                 We generally provide support for organizations in aligning with
                 national and regional compliance requirements to foster
                 sustainable growth and cross-border trade efficiency.
@@ -205,20 +218,29 @@ const Home = () => {
         id="services"
         className=" w-full py-24 flexcent flex-col lg:px-[100px] px-[30px] "
       >
-        <Copy>
+        {" "}
+        <div className="w-full flexcent flex-col text-center">
           {" "}
-          <div className="w-full text-center">
-            {" "}
-            <h2 className="text-3xl font-bold mb-3 text-white">
-              Our <span className="text-secondary">Services</span>
-            </h2>
-            <p className="text-neutral-400 lg:text-lg text-sm lg:max-w-4xl md:max-w-xl  leading-relaxed lg:mb-12 md:mb-6">
-              We help organizations simplify regulatory frameworks across
-              Nigeria and Africa, providing expert advisory in:
-            </p>
-          </div>
-        </Copy>
-
+          <motion.h2
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="text-3xl font-bold mb-4 text-white"
+          >
+            Our <span className="text-secondary">Services</span>
+          </motion.h2>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+            className="text-neutral-400 lg:text-lg text-sm max-w-xl leading-tight lg:mb-12 md:mb-6"
+          >
+            We help organizations simplify regulatory frameworks across Nigeria
+            and Africa, providing expert advisory in:
+          </motion.p>
+        </div>
         <div className="flexcent w-full scale-[0.95]">
           <div
             ref={main}
@@ -229,7 +251,7 @@ const Home = () => {
                 key={id}
                 className="w-full max-w-[400px] h-[250px] rounded-2xl bg-[#0d0d0d] dark:bg-[#202020] overflow-hidden flex flex-col items-center justify-center px-8 space-y-5 box"
               >
-                <Icon icon={item.icon} className="text-3xl" />
+                <Icon icon={item.icon} className="text-4xl" />
                 <div className="text-center space-y-1.5">
                   <h1 className="text-xl font-sans">{item.heading}</h1>
                   <p className="text-sm text-neutral-500">{item.text}</p>
@@ -276,20 +298,29 @@ const Home = () => {
       </section>
 
       {/* Why Us? */}
-      <section className="w-full px-8 lg:px-[100px] py-12">
-        <Copy>
+      <section className="w-full px-8 lg:px-[100px] py-12 bg-[#101010]">
+        {" "}
+        <div className="w-full text-center ">
           {" "}
-          <div className="w-full text-center ">
-            {" "}
-            <h2 className="text-3xl font-bold mb-3 text-white">
-              Why <span className="text-secondary"> Choose Us</span>
-            </h2>
-            <p className="text-neutral-600 lg:mb-12 md:mb-6">
-              Making Complex Regulations Simple for Your Business.
-            </p>
-          </div>
-        </Copy>
-
+          <motion.h2
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="text-3xl font-bold mb-4 text-white"
+          >
+            Why <span className="text-secondary"> Choose Us</span>
+          </motion.h2>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+            className="text-neutral-600 lg:mb-12 md:mb-6"
+          >
+            Making Complex Regulations Simple for Your Business.
+          </motion.p>
+        </div>
         {/* Top: Image and Text Side by Side */}
         <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 mt-10 px-4 flexcent">
           {/* Image Block */}
@@ -356,7 +387,6 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Ending */}
         <div className="w-full flexcent text-center py-5 flex-col">
           <Copy>
@@ -384,7 +414,7 @@ const Home = () => {
           >
             <Link
               href="#contact"
-              className="button bg-primary text-white text-sm gap-2 hover:bg-secondary transition cursor-pointer px-4 py-2 rounded"
+              className="button bg-primary text-black text-sm gap-2 hover:bg-secondary transition cursor-pointer px-4 py-2 hover:scale-105 hover:shadow-2xl duration-200"
             >
               Get Started
               <Icon
@@ -397,20 +427,29 @@ const Home = () => {
       </section>
 
       {/*Contact */}
-      <section
-        id="contact"
-        className="w-full  py-24 px-8 lg:px-[100px] bg-[#101010]"
-      >
+      <section id="contact" className="w-full  py-24 px-8 lg:px-[100px] ">
         <Copy>
           {" "}
           <div className="w-full text-center  mb-12">
             {" "}
-            <h2 className="text-3xl font-bold text-white mb-3">
+            <motion.h2
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-3xl font-bold text-white mb-4"
+            >
               <span className="text-secondary">Contact</span> Us
-            </h2>
-            <p className="text-neutral-500">
+            </motion.h2>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+              className="text-neutral-500"
+            >
               Let’s Discuss Your Compliance & Trade Needs.
-            </p>
+            </motion.p>
           </div>
         </Copy>
 
@@ -419,7 +458,7 @@ const Home = () => {
           <Copy>
             <div className="flex-1 flexbet flex-col h-full pb-6 pt-4 space-y-8">
               <div>
-                <p className="text-2xl pt-2 font-sans hidden lg:block">
+                <p className="text-2xl pt-2 font-sans hidden lg:block mb-8">
                   Your Growth Starts Here — Let’s
                   <span className="text-neutral-600"> simplify</span> your
                   regulatory journey, together.
