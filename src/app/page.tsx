@@ -458,7 +458,7 @@ const Home = () => {
           <Copy>
             <div className="flex-1 flexbet flex-col h-full pb-6 pt-4 space-y-8">
               <div>
-                <p className="text-2xl pt-2 font-sans hidden lg:block mb-8">
+                <p className="text-2xl pt-2 font-sans hidden lg:block mb-">
                   Your Growth Starts Here — Let’s
                   <span className="text-neutral-600"> simplify</span> your
                   regulatory journey, together.
