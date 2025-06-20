@@ -30,10 +30,10 @@ const Header = () => {
   return (
     <div
       className="fixed top-0 left-0 px-8 w-full h-[10vh] flex items-center justify-center z-50 transition-all duration-300
-      max-sm:pl-6 max-sm:pr-8 max-sm:py-4 text-textcolor"
+      max-sm:pl-6 max-sm:pr-8 max-sm:py-4 py-8 text-textcolor filter backdrop-blur-xl"
     >
       <nav className="w-full flex items-center justify-between md:mx-[10px] lg:mx-[50px] ">
-        <div className="w-full flex justify-between gap-10 items-center text-[12px] lg:mt-12 ">
+        <div className="w-full flex justify-between gap-10 items-center text-[12px]  ">
           <div className="flexcent gap-18">
             {/* Logo */}
             <div className="logo-reg text-2xl text-white">RegAfrique</div>

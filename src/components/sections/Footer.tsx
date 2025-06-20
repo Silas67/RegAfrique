@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
               </a>
             </p>
             <p>Phone: 0908 832 8894, 0818 217 7517</p>
-            <p>Lagos, Nigeria</p>
+            <p>Abuja, Nigeria</p>
           </div>
         </div>
 
@@ -37,7 +38,7 @@ const Footer = () => {
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="hover:text-secondary transition duration-300"
+                  className="hover:text-white transition duration-300"
                 >
                   {item}
                 </a>
@@ -67,7 +68,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 group hover:text-secondary transition duration-300"
+                  className="flex items-center gap-2 group hover:text-white transition duration-300"
                 >
                   <Icon icon={social.icon} className="text-xl" />
                   {social.name}
@@ -81,7 +82,18 @@ const Footer = () => {
       {/* Footer bottom */}
       <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-700">
         <p>&copy; 2025 Regafrique. All rights reserved.</p>
-        <p>The website runs on the internet and your smile 😄</p>
+        <div className="flex items-center gap-6 ">
+          <Link href="/">
+            <p className="hover:text-white transition-all duration-300">
+              Terms Of Services
+            </p>
+          </Link>
+          <Link href="/">
+            <p className="hover:text-white transition-all duration-300">
+              Privacy Policy
+            </p>
+          </Link>
+        </div>
       </div>
     </footer>
   );

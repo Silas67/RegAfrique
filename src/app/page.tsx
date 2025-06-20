@@ -260,17 +260,23 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="pt-8">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
+          className="py-12"
+        >
           {/* Heading & Intro */}
-          <div>
-            <ul className="list-disc pl-4">
-              <li className="font-bold text-2xl">
+          <div className=" flexcent gap-4  flex-col text-center">
+            <div className=" flexcent gap-4">
+              <h1 className="font-bold text-2xl">
                 Regulatory Compliance Advisory
-              </li>
-            </ul>
-            <p className="md:pl-10 text-sm text-neutral-400 mt-2 max-w-4xl">
-              We provide seamless support in navigating Nigeria’s regulatory
-              landscape with the following agencies among others:
+              </h1>
+            </div>
+            <p className="md:pl-10 text-sm text-neutral-400 max-sm:pb-8  max-w-4xl">
+              We also provide seamless support in navigating Nigeria’s
+              regulatory landscape with the following agencies among others:
             </p>
           </div>
 
@@ -294,7 +300,7 @@ const Home = () => {
             </div>
             <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Why Us? */}
