@@ -123,15 +123,15 @@ export default function CornerNavGSAP() {
         {open ? (
           <Icon
             icon="fluent:dismiss-20-regular"
-            width="18"
-            height="18"
+            width="24"
+            height="24"
             className="z-50"
           />
         ) : (
           <Icon
             icon="fluent:apps-20-regular"
-            width="18"
-            height="18"
+            width="24"
+            height="24"
             className="z-50"
           />
         )}
@@ -147,7 +147,7 @@ export default function CornerNavGSAP() {
           willChange: "clip-path",
         }}
         className="absolute inset-0 bg-primary
-                   z-40 h-screen md:px-[100px] px-8 flex items-center justify-between max-sm:flex-col"
+                   z-40 h-[100vh] md:px-[100px] px-8 flex items-center justify-between max-sm:flex-col pb-32 pt-10"
       >
         <div
           className="md:w-[70%] w-full h-full  flex flex-col items-start justify-center gap-10
@@ -261,7 +261,7 @@ export default function CornerNavGSAP() {
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-0 w-full px-8 flex flex-col items-center gap-4">
+        <div className="w-full flex flex-col items-center gap-5 sm:mt-0 mt-8">
           {/* small‑screen social icons */}
           <div className="flex gap-6 sm:hidden">
             <Link href="https://instagram.com">
@@ -290,12 +290,12 @@ export default function CornerNavGSAP() {
             </Link>
           </div>
 
-          {/* contact button – visible everywhere */}
+          {/* Contact Us button */}
           <Link
             href="#contact"
             onClick={() => handleNavClick("#contact")}
             className="w-full max-w-xs py-3 bg-primary rounded-3xl text-center
-               text-black font-semibold hover:bg-secondary transition lg:hidden"
+               text-black font-semibold hover:bg-secondary transition"
           >
             Contact&nbsp;Us
           </Link>
