@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo & Contact */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <h2 className="text-2xl font-bd logo-reg">Regafrique</h2>
+            <h2 className="text-2xl font-semibold logo-reg">Regafrique</h2>
           </div>
           <p className="text-neutral-800 text-sm leading-relaxed">
             Regulatory Intelligence for Africa’s Trade Revolution. Reach out to
@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
           <div className="text-sm text-neutral-800">
             <p>
-              Email:{" "}
+              <span className="font-semibold">Email</span>:{" "}
               <a
                 href="mailto:regafrique@outlook.com"
                 className="hover:underline"
@@ -25,8 +25,14 @@ const Footer = () => {
                 regafrique@outlook.com
               </a>
             </p>
-            <p>Phone: 0908 832 8894, 0818 217 7517</p>
-            <p>Abuja, Nigeria</p>
+            <p>
+              <span className="font-semibold">Phone</span>: 0908 832 8894, 0818
+              217 7517
+            </p>
+            <p>
+              <span className="font-semibold">Office</span>: 1st Floor, Kebbi
+              Hotel, Central Business District, Abuja, Nigeria
+            </p>
           </div>
         </div>
 
@@ -81,7 +87,7 @@ const Footer = () => {
 
       {/* Footer bottom */}
       <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-700">
-        <p>&copy; 2025 Regafrique. All rights reserved.</p>
+        <p>&copy; 2025 SilasCodes. All rights reserved.</p>
         <div className="flex items-center gap-6 ">
           <Link href="/">
             <p className="hover:text-white transition-all duration-300">
