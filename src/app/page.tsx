@@ -452,7 +452,7 @@ const Home = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-              className="text-neutral-500"
+              className="text-neutral-500 hidden md:block"
             >
               Let’s Discuss Your Compliance & Trade Needs.
             </motion.p>
